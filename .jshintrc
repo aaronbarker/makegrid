@@ -12,7 +12,6 @@
   "smarttabs": true,
   "indent": 1,
   "globals" : {
-    "jQuery": true,
-    "console": true
+    "jQuery": true
   }
 }

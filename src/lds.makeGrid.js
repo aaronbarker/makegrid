@@ -90,7 +90,6 @@
 			lastOfRow = kids.eq(numCols-1);
 			// console.debug(lastOfRow,wrapperRightX,lastOfRow.offset().left + lastOfRow.outerWidth(true));
 			if(!opts.isIE8){ // ie8 siezes up on this loop, so don't do it in ie8
-				var x = 0;
 				while(lastOfRow.length && (wrapperRightX - (lastOfRow.offset().left + lastOfRow.outerWidth(true)) > 10)){
 					/*  Nice round numbers like 0.1 cause interesting floating
 						point rounding errors because they cannot be accuratly 
@@ -102,11 +101,6 @@
 
 					// last column is the same as first colum, there is a width issue
 					kids.css("width",colWidth+"%");
-					// in rare circumstances this goes into an endless loop. the following is a safety valve
-					if(x > 10){
-						return;
-					}
-					x++;
 				}
 			}
 		}
