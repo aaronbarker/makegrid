@@ -1,7 +1,7 @@
 /*!
 * makeGrid
 * @description	Dynamically creates rows/cols for grids of images/blocks responsively
-* @version		1.2.0 - 2013/11/21
+* @version		1.3.0 - 2014/06/06
 * @author		Aaron Barker
 * @requires	ui.widget.js
 * @copyright	Copyright Intellectual Reserve Inc. All rights reserved.
@@ -84,6 +84,9 @@
 						$(this).addClass(lastClass);
 					}
 				});
+			} else {
+				// even if there is only one column, the first/last clases are beneficial to othe plugins
+				kids.addClass(firstClass+" "+lastClass);
 			}
 
 			// occasionally with a decimal margin, things don't add up. Make sure they do
@@ -112,6 +115,6 @@
 		}
 	});
 	$.extend($.lds.makeGrid, {
-		version: "1.2.0"
+		version: "1.3.0"
 	});
 })(jQuery);

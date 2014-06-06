@@ -84,6 +84,9 @@
 						$(this).addClass(lastClass);
 					}
 				});
+			} else {
+				// even if there is only one column, the first/last clases are beneficial to othe plugins
+				kids.addClass(firstClass+" "+lastClass);
 			}
 
 			// occasionally with a decimal margin, things don't add up. Make sure they do
