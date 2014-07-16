@@ -57,6 +57,9 @@ Default: see code
 Sets up the resize event for the script. Declared as an option so other resize solutions can be used, such as a throttle
 
 ## Changelog
+### 1.3.1
+* Changing console.debug statements to console.warn statements
+
 ### 1.3.0
 * Added firstClass and lastClass to elements even when there is only 1 per row. Other scripts still need them for doing stuff.
 
