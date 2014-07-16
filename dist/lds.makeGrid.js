@@ -1,10 +1,10 @@
 /*!
 * makeGrid
 * @description	Dynamically creates rows/cols for grids of images/blocks responsively
-* @version		1.3.0 - 2014/06/06
+* @version		1.3.1 - 2014 / 07 / 16 
 * @author		Aaron Barker
 * @requires	ui.widget.js
-* @copyright	Copyright Intellectual Reserve Inc. All rights reserved.
+* @copyright	Copyright 2014 by Intellectual Reserve, Inc.
 */
 (function($) {
 	"use strict";
@@ -47,12 +47,12 @@
 			// make sure a few required things are available
 			if(firstKid.css("float") === "none"){
 				// if the kids aren't floated things go bad. So make sure they are
-				console.debug("MakeGrid: kids aren't floated");
+				console.warn("MakeGrid: kids aren't floated");
 				return;
 			}
 			if(!firstKid.outerHeight(true)){
 				// if the kids don't have a height (due to absolutely positioning sub-elements, or images not loaded yet) things go bad. So make sure we have some kind of height
-				console.debug("MakeGrid: kids don't have height");
+				console.warn("MakeGrid: kids don't have height");
 				return;
 			}
 			kids.removeClass(firstClass+" "+lastClass);
@@ -115,6 +115,6 @@
 		}
 	});
 	$.extend($.lds.makeGrid, {
-		version: "1.3.0"
+		version: "1.3.1"
 	});
 })(jQuery);
